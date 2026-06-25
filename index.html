@@ -10,60 +10,73 @@
         theme: {
           extend: {
             colors: {
-              primary: '#0f172a',
+              primary: '#020617',
               accent: '#38bdf8',
             },
           },
         },
       };
     </script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="bg-slate-50 text-slate-900 antialiased">
-    <header class="sticky top-0 z-20 bg-white/90 backdrop-blur border-b border-slate-200">
+  <body class="bg-primary text-white antialiased">
+    <header class="sticky top-0 z-20 border-b border-slate-800/80 backdrop-blur-xl">
       <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <a href="#hero" class="text-xl font-semibold text-slate-900">Abhi</a>
-        <nav class="hidden gap-8 text-sm font-medium text-slate-600 md:flex">
-          <a href="#hero" class="hover:text-slate-900">Home</a>
-          <a href="#territory" class="hover:text-slate-900">Territory Manager</a>
-          <a href="#experience" class="hover:text-slate-900">Experience</a>
+        <a href="#hero" class="text-xl font-semibold text-white">Abhi</a>
+        <nav class="hidden gap-8 text-sm font-medium text-slate-300 md:flex">
+          <a href="#hero" class="hover:text-white">Home</a>
+          <a href="#territory" class="hover:text-white">Territory Manager</a>
+          <a href="#experience" class="hover:text-white">Experience</a>
         </nav>
-        <button id="menuBtn" class="inline-flex items-center rounded-lg border border-slate-200 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 md:hidden">
+        <button id="menuBtn" class="inline-flex items-center rounded-xl border border-slate-700/80 bg-slate-950/70 px-4 py-2 text-sm font-medium text-slate-200 hover:bg-slate-900 md:hidden">
           Menu
         </button>
       </div>
-      <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white md:hidden">
-        <div class="space-y-2 px-6 py-4 text-sm text-slate-700">
-          <a href="#hero" class="block rounded-lg px-3 py-2 hover:bg-slate-100">Home</a>
-          <a href="#territory" class="block rounded-lg px-3 py-2 hover:bg-slate-100">Territory Manager</a>
-          <a href="#experience" class="block rounded-lg px-3 py-2 hover:bg-slate-100">Experience</a>
+      <div id="mobileMenu" class="hidden border-t border-slate-800 bg-slate-950/98 md:hidden">
+        <div class="space-y-2 px-6 py-4 text-sm text-slate-200">
+          <a href="#hero" class="block rounded-2xl px-3 py-2 hover:bg-slate-800">Home</a>
+          <a href="#territory" class="block rounded-2xl px-3 py-2 hover:bg-slate-800">Territory Manager</a>
+          <a href="#experience" class="block rounded-2xl px-3 py-2 hover:bg-slate-800">Experience</a>
         </div>
       </div>
     </header>
 
     <main>
-      <section id="hero" class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white">
-        <div class="mx-auto max-w-6xl px-6 py-20 lg:flex lg:items-center lg:justify-between lg:gap-10">
-          <div class="max-w-2xl">
-            <p class="mb-4 inline-flex rounded-full bg-cyan-500/20 px-4 py-2 text-sm font-semibold text-cyan-200">Territory Manager Portfolio</p>
-            <h1 class="text-4xl font-bold tracking-tight sm:text-5xl">Building high-impact territory strategies with results-driven sales execution.</h1>
-            <p class="mt-6 text-base leading-8 text-slate-200 sm:text-lg">I help teams grow market share, improve customer coverage, and deliver measurable revenue gains across complex territories.</p>
-            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a href="#territory" class="inline-flex items-center justify-center rounded-xl bg-cyan-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:bg-cyan-400">Explore Territory Work</a>
-              <a href="#experience" class="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/20">View Experience</a>
+      <section id="hero" class="relative overflow-hidden bg-slate-950 text-white">
+        <div class="mx-auto max-w-6xl px-6 py-20 lg:grid lg:grid-cols-[1.4fr_1fr] lg:items-center lg:gap-12">
+          <div class="space-y-8">
+            <p class="inline-flex rounded-full bg-cyan-500/20 px-4 py-2 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-200">Territory Manager Portfolio</p>
+            <h1 class="max-w-3xl text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">Dark-themed territory leadership with bold growth and client-first execution.</h1>
+            <p class="max-w-2xl text-lg leading-8 text-slate-300">I combine territory planning, team coaching, and sales operations to deliver consistent revenue growth in competitive markets.</p>
+            <div class="flex flex-col gap-4 sm:flex-row">
+              <a href="#territory" class="inline-flex items-center justify-center rounded-2xl bg-cyan-500 px-6 py-3 text-sm font-semibold text-slate-950 shadow-2xl shadow-cyan-500/20 transition hover:bg-cyan-400">Explore territory work</a>
+              <a href="#experience" class="inline-flex items-center justify-center rounded-2xl border border-slate-700 bg-slate-900/80 px-6 py-3 text-sm font-semibold text-white transition hover:border-cyan-400 hover:text-cyan-200">View experience</a>
             </div>
           </div>
-          <div class="mt-10 lg:mt-0">
-            <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl shadow-slate-950/30 backdrop-blur">
-              <div class="flex items-center gap-4">
-                <div class="h-16 w-16 rounded-3xl bg-cyan-500/15 flex items-center justify-center text-2xl">🚀</div>
+          <div class="relative mt-12 lg:mt-0">
+            <div class="hero-card rounded-[2rem] p-6 shadow-2xl shadow-slate-950/40">
+              <div class="absolute -right-8 -top-8 h-24 w-24 rounded-full bg-cyan-500/20 blur-3xl"></div>
+              <div class="flex flex-col items-center gap-5 rounded-[1.8rem] bg-slate-900/80 p-6 text-center">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="Profile photo" class="profile-image h-40 w-40 rounded-[2rem] object-cover shadow-xl shadow-cyan-500/20" />
                 <div>
-                  <p class="text-sm uppercase tracking-[0.22em] text-cyan-200">Current Role</p>
-                  <p class="mt-1 text-lg font-semibold">Senior Territory Manager</p>
+                  <p class="text-sm uppercase tracking-[0.24em] text-cyan-300">Abhi</p>
+                  <h2 class="mt-3 text-3xl font-semibold text-white">Territory Manager</h2>
+                  <p class="mt-3 text-sm leading-6 text-slate-300">Strategic sales leader focused on territory planning, market coverage, and team performance.</p>
                 </div>
               </div>
-              <div class="mt-6 space-y-4 text-sm leading-6 text-slate-200">
-                <p>Experienced in territory planning, key account development, and sales performance optimization across B2B markets.</p>
-                <p>Skilled with CRM, route planning, analytics, and leading cross-functional teams to exceed targets.</p>
+              <div class="mt-8 grid gap-4 sm:grid-cols-3">
+                <div class="stat-card animate-fade-up rounded-[1.6rem] p-5 text-left transition-transform duration-300">
+                  <p class="text-sm uppercase tracking-[0.24em] text-cyan-300">Territories</p>
+                  <p class="mt-3 text-3xl font-semibold text-white stat-value" data-stat-value="18" data-stat-suffix="+">0+</p>
+                </div>
+                <div class="stat-card animate-fade-up rounded-[1.6rem] p-5 text-left transition-transform duration-300" style="animation-delay: 0.1s;">
+                  <p class="text-sm uppercase tracking-[0.24em] text-cyan-300">Revenue growth</p>
+                  <p class="mt-3 text-3xl font-semibold text-white stat-value" data-stat-value="22" data-stat-suffix="%">0%</p>
+                </div>
+                <div class="stat-card animate-fade-up rounded-[1.6rem] p-5 text-left transition-transform duration-300" style="animation-delay: 0.2s;">
+                  <p class="text-sm uppercase tracking-[0.24em] text-cyan-300">Team size</p>
+                  <p class="mt-3 text-3xl font-semibold text-white stat-value" data-stat-value="12" data-stat-suffix="+">0+</p>
+                </div>
               </div>
             </div>
           </div>
@@ -72,48 +85,48 @@
 
       <section id="territory" class="mx-auto max-w-6xl px-6 py-20">
         <div class="mb-12 text-center">
-          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-500">Territory Manager</p>
-          <h2 class="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">How I design winning territory coverage.</h2>
-          <p class="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600">Strong territory leadership starts with data, customer relationships, and a repeatable process.</p>
+          <p class="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-400">Territory Manager</p>
+          <h2 class="mt-3 text-3xl font-semibold text-white sm:text-4xl">How I strengthen territories with strategy and execution.</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-300">When territory planning is clean, teams move faster and customers receive the right attention at the right time.</p>
         </div>
 
         <div class="grid gap-8 lg:grid-cols-3">
-          <article class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-600">1</span>
-            <h3 class="mt-6 text-xl font-semibold text-slate-900">Territory Planning</h3>
-            <p class="mt-4 text-slate-600">Segment accounts, define ideal customer profiles, and map coverage to prioritize high-value opportunities with clarity.</p>
+          <article class="stat-card rounded-[2rem] p-8 shadow-xl shadow-slate-950/30 transition-transform duration-300 hover:-translate-y-1">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500/15 text-cyan-300">1</span>
+            <h3 class="mt-6 text-xl font-semibold text-white">Territory Planning</h3>
+            <p class="mt-4 text-slate-300">Segment accounts, align routes, and set coverage priorities that maximize field productivity and customer impact.</p>
           </article>
-          <article class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-600">2</span>
-            <h3 class="mt-6 text-xl font-semibold text-slate-900">Sales Execution</h3>
-            <p class="mt-4 text-slate-600">Align field resources, optimize routes, and execute cross-sell campaigns that accelerate customer adoption and retention.</p>
+          <article class="stat-card rounded-[2rem] p-8 shadow-xl shadow-slate-950/30 transition-transform duration-300 hover:-translate-y-1">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500/15 text-cyan-300">2</span>
+            <h3 class="mt-6 text-xl font-semibold text-white">Sales Execution</h3>
+            <p class="mt-4 text-slate-300">Drive consistent cadence, team coaching, and customer follow-up to turn territory plans into revenue.</p>
           </article>
-          <article class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
-            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-600">3</span>
-            <h3 class="mt-6 text-xl font-semibold text-slate-900">Performance Measurement</h3>
-            <p class="mt-4 text-slate-600">Monitor KPIs, adjust plans with real-time insights, and report results with dashboards that connect activities to revenue.</p>
+          <article class="stat-card rounded-[2rem] p-8 shadow-xl shadow-slate-950/30 transition-transform duration-300 hover:-translate-y-1">
+            <span class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-500/15 text-cyan-300">3</span>
+            <h3 class="mt-6 text-xl font-semibold text-white">Performance Measurement</h3>
+            <p class="mt-4 text-slate-300">Use dashboards, KPIs, and territory reviews to keep goals visible and improve performance every quarter.</p>
           </article>
         </div>
 
         <div class="mt-16 grid gap-8 lg:grid-cols-2">
-          <div class="rounded-3xl border border-slate-200 bg-slate-950/5 p-8 shadow-sm">
-            <h3 class="text-2xl font-semibold text-slate-900">Key achievement</h3>
-            <p class="mt-4 text-slate-600">Led a territory expansion program that increased coverage by 35% and drove a 22% uplift in quarterly revenue across three regions.</p>
-            <ul class="mt-6 space-y-3 text-slate-600">
-              <li class="flex items-start gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-cyan-500"></span>Optimized account segmentation and route visits.</li>
-              <li class="flex items-start gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-cyan-500"></span>Built stakeholder alignment with sales, marketing, and operations.</li>
-              <li class="flex items-start gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-cyan-500"></span>Introduced quarterly business reviews for territory performance.</li>
+          <div class="rounded-[2rem] bg-slate-900/90 p-8 shadow-xl shadow-slate-950/30">
+            <h3 class="text-2xl font-semibold text-white">Key achievement</h3>
+            <p class="mt-4 text-slate-300">Led a territory expansion program that increased coverage by 35% and delivered a 22% uplift in quarterly revenue across three regions.</p>
+            <ul class="mt-6 space-y-3 text-slate-300">
+              <li class="flex items-start gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-cyan-400"></span>Optimized account segmentation and route planning.</li>
+              <li class="flex items-start gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-cyan-400"></span>Built stakeholder alignment with sales, marketing, and operations.</li>
+              <li class="flex items-start gap-3"><span class="mt-1 h-2.5 w-2.5 rounded-full bg-cyan-400"></span>Introduced quarterly territory performance reviews.</li>
             </ul>
           </div>
-          <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
-            <h3 class="text-2xl font-semibold text-slate-900">Tools & expertise</h3>
+          <div class="rounded-[2rem] bg-slate-900/90 p-8 shadow-xl shadow-slate-950/30">
+            <h3 class="text-2xl font-semibold text-white">Tools & expertise</h3>
             <div class="mt-6 grid gap-3 sm:grid-cols-2">
-              <span class="rounded-2xl bg-slate-100 px-4 py-2 text-sm text-slate-700">CRM Strategy</span>
-              <span class="rounded-2xl bg-slate-100 px-4 py-2 text-sm text-slate-700">Route Planning</span>
-              <span class="rounded-2xl bg-slate-100 px-4 py-2 text-sm text-slate-700">Forecasting</span>
-              <span class="rounded-2xl bg-slate-100 px-4 py-2 text-sm text-slate-700">Customer Retention</span>
-              <span class="rounded-2xl bg-slate-100 px-4 py-2 text-sm text-slate-700">Team Leadership</span>
-              <span class="rounded-2xl bg-slate-100 px-4 py-2 text-sm text-slate-700">Sales Enablement</span>
+              <span class="rounded-2xl bg-slate-800/90 px-4 py-2 text-sm text-slate-200">CRM Strategy</span>
+              <span class="rounded-2xl bg-slate-800/90 px-4 py-2 text-sm text-slate-200">Route Planning</span>
+              <span class="rounded-2xl bg-slate-800/90 px-4 py-2 text-sm text-slate-200">Forecasting</span>
+              <span class="rounded-2xl bg-slate-800/90 px-4 py-2 text-sm text-slate-200">Customer Retention</span>
+              <span class="rounded-2xl bg-slate-800/90 px-4 py-2 text-sm text-slate-200">Team Leadership</span>
+              <span class="rounded-2xl bg-slate-800/90 px-4 py-2 text-sm text-slate-200">Sales Enablement</span>
             </div>
           </div>
         </div>
@@ -123,38 +136,38 @@
         <div class="mx-auto max-w-6xl px-6">
           <div class="mb-12 text-center">
             <p class="text-sm font-semibold uppercase tracking-[0.24em] text-cyan-400">Experience</p>
-            <h2 class="mt-3 text-3xl font-bold sm:text-4xl">Experience highlights</h2>
+            <h2 class="mt-3 text-3xl font-semibold sm:text-4xl">Experience highlights</h2>
             <p class="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-300">A track record of measurable growth, team development, and territory optimization.</p>
           </div>
 
           <div class="space-y-8">
-            <div class="grid gap-6 rounded-3xl border border-white/10 bg-slate-900/90 p-8 shadow-lg shadow-slate-950/20 lg:grid-cols-3 lg:items-center">
+            <div class="grid gap-6 rounded-[2rem] bg-slate-900/90 p-8 shadow-2xl shadow-slate-950/20 lg:grid-cols-3 lg:items-center">
               <div>
                 <p class="text-sm uppercase tracking-[0.24em] text-cyan-400">2024 - Present</p>
-                <h3 class="mt-3 text-2xl font-semibold">Senior Territory Manager</h3>
+                <h3 class="mt-3 text-2xl font-semibold text-white">Senior Territory Manager</h3>
                 <p class="mt-3 text-slate-300">Led territory strategy for high-growth B2B services while mentoring a team of field representatives.</p>
               </div>
               <div class="space-y-3 text-slate-300">
                 <p><strong class="text-white">22% revenue growth</strong> across key accounts.</p>
                 <p><strong class="text-white">35% territory coverage increase</strong> through targeted reallocation.</p>
               </div>
-              <div class="rounded-3xl bg-slate-950/80 p-5 text-center text-slate-200">
+              <div class="rounded-[1.8rem] bg-slate-950/80 p-5 text-center text-slate-200">
                 <p class="text-sm uppercase tracking-[0.24em] text-cyan-300">Focus</p>
                 <p class="mt-3 text-lg font-semibold">Account expansion & sales operations</p>
               </div>
             </div>
 
-            <div class="grid gap-6 rounded-3xl border border-white/10 bg-slate-900/90 p-8 shadow-lg shadow-slate-950/20 lg:grid-cols-3 lg:items-center">
+            <div class="grid gap-6 rounded-[2rem] bg-slate-900/90 p-8 shadow-2xl shadow-slate-950/20 lg:grid-cols-3 lg:items-center">
               <div>
                 <p class="text-sm uppercase tracking-[0.24em] text-cyan-400">2021 - 2024</p>
-                <h3 class="mt-3 text-2xl font-semibold">Regional Sales Lead</h3>
+                <h3 class="mt-3 text-2xl font-semibold text-white">Regional Sales Lead</h3>
                 <p class="mt-3 text-slate-300">Managed the field team across three markets, implementing process improvements and customer outreach programs.</p>
               </div>
               <div class="space-y-3 text-slate-300">
                 <p><strong class="text-white">18% increase</strong> in customer retention.</p>
                 <p><strong class="text-white">15 new partnerships</strong> developed with channel partners.</p>
               </div>
-              <div class="rounded-3xl bg-slate-950/80 p-5 text-center text-slate-200">
+              <div class="rounded-[1.8rem] bg-slate-950/80 p-5 text-center text-slate-200">
                 <p class="text-sm uppercase tracking-[0.24em] text-cyan-300">Focus</p>
                 <p class="mt-3 text-lg font-semibold">Partner sales & customer success</p>
               </div>
@@ -164,19 +177,13 @@
       </section>
     </main>
 
-    <footer class="border-t border-slate-200 bg-white py-6">
-      <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 text-sm text-slate-600 md:flex-row md:items-center md:justify-between">
+    <footer class="border-t border-slate-800 bg-slate-950 py-6">
+      <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 text-sm text-slate-400 md:flex-row md:items-center md:justify-between">
         <p>© 2026 Abhi. Portfolio built with Tailwind CSS and JavaScript.</p>
-        <p>Ready to connect? <a href="mailto:hello@example.com" class="font-semibold text-slate-900 hover:text-cyan-500">hello@example.com</a></p>
+        <p>Ready to connect? <a href="mailto:hello@example.com" class="font-semibold text-white hover:text-cyan-400">hello@example.com</a></p>
       </div>
     </footer>
 
-    <script>
-      const menuBtn = document.getElementById('menuBtn');
-      const mobileMenu = document.getElementById('mobileMenu');
-      menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
